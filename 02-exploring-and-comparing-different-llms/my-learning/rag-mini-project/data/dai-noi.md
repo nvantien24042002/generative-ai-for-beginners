@@ -6,8 +6,8 @@
 
 ## Vị trí địa lý
 
-Đại Nội Huế nằm tại Đường 23/8, P. Thuận Hòa, TP. Huế.,
-thuộc thành phố Huế, Việt Nam.
+Đại Nội Huế nằm trên đường 23 Tháng 8,
+khu vực trung tâm thành phố Huế, Việt Nam.
 
 ## Đặc điểm kiến trúc
 
