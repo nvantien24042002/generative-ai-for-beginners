@@ -4,6 +4,11 @@
 
 Đại Nội Huế là khu vực trung tâm của Quần thể di tích Cố đô Huế, bao gồm Hoàng Thành và Tử Cấm Thành, từng là trung tâm hành chính và sinh hoạt của triều đình nhà Nguyễn suốt 143 năm (1802–1945). Công trình được vua Gia Long khởi công xây dựng từ năm 1804 và tiếp tục được hoàn thiện dưới thời vua Minh Mạng vào năm 1833.
 
+## Vị trí địa lý
+
+Đại Nội Huế nằm tại Đường 23/8, P. Thuận Hòa, TP. Huế.,
+thuộc thành phố Huế, Việt Nam.
+
 ## Đặc điểm kiến trúc
 
 Đại Nội được quy hoạch theo nguyên tắc phong thủy phương Đông và kiến trúc thành quách kiểu Vauban của phương Tây, với mặt bằng gần vuông mỗi bề khoảng 600 mét, bao bọc bởi hệ thống hào nước và tường thành gạch kiên cố.
