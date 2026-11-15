@@ -294,7 +294,7 @@ output_format = """
 4. Khi không đủ thông tin,
    không thêm dòng Nguồn.
 """
-prompt = f"""
+system_instruction = f"""
 VAI TRÒ:
 {role}
 NHIỆM VỤ:
@@ -312,7 +312,14 @@ CÂU HỎI:
 
 CÂU TRẢ LỜI:
 """
+# USER PROMPT
+user_prompt = f"""
+TÀI LIỆU THAM KHẢO:
+{context}
 
+CÂU HỎI NGƯỜI DÙNG:
+{query}
+"""
 
 
 print("\n========== PROMPT READY ==========")
@@ -344,9 +351,13 @@ try:
     print("\nDang ket noi Gemini...", flush=True)
 
     response = client.models.generate_content(
-        model=GEMINI_MODEL,
-        contents=prompt
+    model=GEMINI_MODEL,
+    contents=user_prompt,
+    config=types.GenerateContentConfig(
+        system_instruction=system_instruction,
+        temperature=0.2
     )
+)
 
     if response.text:
         print("\n========== RAG ANSWER ==========")
