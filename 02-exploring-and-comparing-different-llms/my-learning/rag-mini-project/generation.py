@@ -14,7 +14,7 @@ DATA_DIR = BASE_DIR / "data"
 
 MODEL_NAME = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 GEMINI_MODEL = "gemini-3.5-flash-lite"
-TOP_K = 1
+TOP_K = 2
 query = "Đại Nội Huế nằm ở đâu?"
 
 generation_success = False
