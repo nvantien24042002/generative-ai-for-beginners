@@ -54,6 +54,8 @@ print("\n========== DOCUMENT CHUNKING ==========")
 
 chunks = []
 
+
+
 for document in documents:
     text = document["content"].strip()
 
@@ -93,6 +95,54 @@ if not chunks:
     raise ValueError("Không tạo được chunk nào")
 
 print(f"Total chunks: {len(chunks)}")
+
+# ==========================================
+# STAGE 7 - CHECKPOINT 3: CHUNKING OPTIMIZATION
+# ==========================================
+
+optimized_chunks = []
+
+for chunk in chunks:
+    content = chunk["content"].strip()
+
+    if content.startswith("# ") and "\n" not in content:
+        optimized_chunks.append({
+            **chunk,
+            "needs_merge": True
+        })
+    else:
+        if (
+            optimized_chunks
+            and optimized_chunks[-1].get("needs_merge")
+            and optimized_chunks[-1]["filename"] == chunk["filename"]
+        ):
+            previous = optimized_chunks[-1]
+            previous["content"] += "\n\n" + content
+            previous["needs_merge"] = False
+        else:
+            optimized_chunks.append({
+                **chunk,
+                "needs_merge": False
+            })
+
+for chunk in optimized_chunks:
+    chunk.pop("needs_merge", None)
+
+for index, chunk in enumerate(optimized_chunks, start=1):
+    chunk["chunk_id"] = index
+
+chunks = optimized_chunks
+
+print("\n========== OPTIMIZED CHUNKS ==========")
+
+for chunk in chunks:
+    print(
+        f"Chunk {chunk['chunk_id']} | "
+        f"Source: {chunk['filename']} | "
+        f"Length: {len(str(chunk['content']))}"
+    )
+
+print(f"Total optimized chunks: {len(chunks)}")
 
 
 # ==========================================
