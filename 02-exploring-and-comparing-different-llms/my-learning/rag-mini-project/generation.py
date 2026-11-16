@@ -298,24 +298,23 @@ output_format = """
 4. Khi không đủ thông tin,
    không thêm dòng Nguồn.
 """
+
+
+# SYSTEM INSTRUCTION
 system_instruction = f"""
 VAI TRÒ:
 {role}
+
 NHIỆM VỤ:
 {task}
+
 QUY TẮC:
 {constraints}
+
 ĐỊNH DẠNG ĐẦU RA:
 {output_format}
-
-TÀI LIỆU:
-{context}
-
-CÂU HỎI:
-{query}
-
-CÂU TRẢ LỜI:
 """
+
 # USER PROMPT
 user_prompt = f"""
 TÀI LIỆU THAM KHẢO:
@@ -324,6 +323,7 @@ TÀI LIỆU THAM KHẢO:
 CÂU HỎI NGƯỜI DÙNG:
 {query}
 """
+
 
 
 print("\n========== PROMPT READY ==========")
